@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -25,7 +26,7 @@ public class BallMovement : MonoBehaviour
         switch (obstacle)
         {
             case "Pads":
-                ballStats.InvertXDirection();
+                BounceOnPads(other);
                 break;
             
             case "Border":
@@ -36,5 +37,12 @@ public class BallMovement : MonoBehaviour
                 ballStats.InvertXDirection();
                 break;
         }
+    }
+
+    private void BounceOnPads(Collision2D other)
+    {
+        float distanceX = transform.position.x - other.transform.position.x;
+        bool invertX = Math.Abs(distanceX) > ballStats.ThresholdVerticalDistance;
+        ballStats.InvertDirection(invertX);
     }
 }
