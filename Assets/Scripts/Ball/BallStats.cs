@@ -12,6 +12,16 @@ using UnityEngine;
     {
         return direction.normalized * speed;
     }
- }
+
+    public void InvertXDirection()
+    {
+        direction = new Vector3(direction.x * -1, direction.y, direction.z);
+    }
+    
+    public void InvertYDirection()
+    {
+        direction = new Vector3(direction.x, direction.y  * -1, direction.z);
+    }
+}
  
 
