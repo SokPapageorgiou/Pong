@@ -34,7 +34,7 @@ public class BallMovement : MonoBehaviour
                 break;
             
             case "Goal":
-                ballStats.InvertXDirection();
+                ballStats.Respawn(this.gameObject);
                 break;
         }
     }
