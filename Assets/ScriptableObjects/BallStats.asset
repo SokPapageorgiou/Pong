@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BallStats
   m_EditorClassIdentifier: 
   speed: 5
-  timeToRespawn: 0
+  timeToRespawn: 2
   initialDirection: {x: 1, y: -1, z: 0}
   initialPosition: {x: 0, y: 0, z: 0}
   thresholdVerticaLDistance: 0.25
