@@ -14,9 +14,8 @@ public class PadMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(padsStats.UpInput)) MoveUp();
-        
-        if (Input.GetKey(padsStats.DownInput)) MoveDown();
+        if (Input.GetKey(padsStats.UpInput) && transform.position.y < padsStats.MinimunDistanceToEdges) MoveUp();
+        if (Input.GetKey(padsStats.DownInput) && transform.position.y > padsStats.MinimunDistanceToEdges * -1) MoveDown();
     }
 
     private void MoveUp()

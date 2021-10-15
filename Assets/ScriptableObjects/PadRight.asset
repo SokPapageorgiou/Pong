@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PadRight
   m_EditorClassIdentifier: 
   speed: 5
+  minimunDistanceToEdges: 3.5
   upInput: o
   downInput: l
